@@ -29,37 +29,6 @@ public static class ServiceCollectionExtensions
         services.AddTransient<IConfigureOptions<SwaggerGenOptions>, SwaggerOptionsConfiguration>();
         services.AddSwaggerGen();
 
-        //services.AddSwaggerGen(options =>
-        //{
-        //    options.SwaggerDoc("ParkyOpenAPISpec", new OpenApiInfo
-        //    {
-        //        Title = "Parky API",
-        //        Version = "v1",
-        //        Description = "Description of Parky API",
-        //        License = new OpenApiLicense
-        //        {
-        //            Name = "MIT License",
-        //            Url = new Uri("https://en.wikipedia.org/wiki/MIT_License")
-        //        }
-        //    });
-
-        //    options.SwaggerDoc("ParkyOpenAPISpecTrail", new OpenApiInfo
-        //    {
-        //        Title = "Parky API Trail",
-        //        Version = "v1",
-        //        Description = "Description of Parky API Trail",
-        //        License = new OpenApiLicense
-        //        {
-        //            Name = "MIT License",
-        //            Url = new Uri("https://en.wikipedia.org/wiki/MIT_License")
-        //        }
-        //    });
-
-        //    var xmlCommentFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-        //    var cmlCommentsFullPath = Path.Combine(AppContext.BaseDirectory, xmlCommentFile);
-        //    options.IncludeXmlComments(cmlCommentsFullPath);
-        //});
-
         return services;
     }
 

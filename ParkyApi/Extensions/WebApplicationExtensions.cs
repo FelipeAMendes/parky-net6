@@ -21,13 +21,6 @@ public static class WebApplicationExtensions
 
             options.RoutePrefix = "";
         });
-
-        //app.UseSwaggerUI(options =>
-        //{
-        //    options.SwaggerEndpoint("/swagger/ParkyOpenAPISpec/swagger.json", "ParkyAPI");
-        //    options.SwaggerEndpoint("/swagger/ParkyOpenAPISpecTrail/swagger.json", "ParkyAPI Trail");
-        //    options.RoutePrefix = "";
-        //});
     }
 
     public static void ExecuteMigrations(this WebApplication app)

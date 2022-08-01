@@ -12,7 +12,6 @@ namespace ParkyApi.Controllers;
 [ApiController]
 [Route("api/v{version:apiVersion}/[controller]")]
 [Authorize(Roles = "Admin")]
-//[ApiExplorerSettings(GroupName = "ParkyOpenAPISpecTrail")]
 public class TrailsController : ControllerBase
 {
     private readonly IMapper _mapper;
