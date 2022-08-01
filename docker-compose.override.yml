@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  parkyapi:
+    container_name: parkyapi
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionString=Server=orderdb;User Id=sa;Password=mendes12345678"
+      - "JwtSecret=FS#DEFsvD45r#ahWYHd"
+    depends_on:
+      - orderdb
+    ports:
+      - "8001:80"
+
+  parkyweb:
+    container_name: parkyweb
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - API_BASE_URL=http://parkyapi
+    depends_on:
+      - parkyapi
+    ports:
+      - "8002:80"
+
+  orderdb:
+    container_name: orderdb
+    environment:
+      SA_PASSWORD: "mendes12345678"
+      ACCEPT_EULA: "Y"
+    restart: always
+    ports:
+      - "1433:1433"

@@ -1,0 +1,29 @@
+﻿@model ParkyWeb.Models.ViewModels.UserViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>Register</h1>
+<form method="post" asp-action="Login">
+    <div class="col-6">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Username"></label>
+            <input asp-for="Username" type="text" placeholder="Username..." class="form-control" />
+            <span asp-validation-for="Username" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="Password"></label>
+            <input asp-for="Password" type="text" placeholder="Password..." class="form-control" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <label asp-for="Role"></label>
+            <input asp-for="Role" type="text" placeholder="Role..." class="form-control" />
+            <span asp-validation-for="Role" class="text-danger"></span>
+        </div>
+        <div class="form-group mt-3">
+            <button type="submit" class="btn btn-outline-primary">Register</button>
+        </div>
+    </div>
+</form>

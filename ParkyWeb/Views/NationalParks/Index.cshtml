@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "National Parks";
+}
+
+<div class="p-4" style="border-radius:20px;">
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">National Park List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-action="Upsert" class="btn btn-primary text-white"><i class="fas fa-plus"></i> &nbsp; Create New</a>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="bs-component p-3 rounded">
+            <table id="tblData" class="table table-hover" style="width:100%">
+                <thead>
+                <tr class="table-active">
+                    <th scope="col">Name</th>
+                    <th scope="col">State</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+{
+    <script src="js/nationalPark.js"></script>
+}
